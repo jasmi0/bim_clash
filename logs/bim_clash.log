@@ -1,0 +1,68 @@
+2025-10-20 13:47:16,273 - src.bim_parser - INFO - Successfully loaded IFC file: data/uploaded_files/basin-tessellation.ifc
+2025-10-20 13:47:16,274 - src.bim_parser - INFO - Found 0 elements of type IfcWall
+2025-10-20 13:47:16,274 - src.bim_parser - INFO - Found 0 elements of type IfcBeam
+2025-10-20 13:47:16,274 - src.bim_parser - INFO - Found 0 elements of type IfcColumn
+2025-10-20 13:47:16,275 - src.bim_parser - INFO - Found 0 elements of type IfcSlab
+2025-10-20 13:47:16,275 - src.bim_parser - INFO - Found 0 elements of type IfcPipeSegment
+2025-10-20 13:47:16,275 - src.bim_parser - INFO - Found 0 elements of type IfcDuctSegment
+2025-10-20 13:47:16,275 - src.bim_parser - INFO - Found 0 elements of type IfcCableCarrierSegment
+2025-10-20 13:47:16,275 - src.bim_parser - INFO - Found 0 elements of type IfcDoor
+2025-10-20 13:47:16,275 - src.bim_parser - INFO - Found 0 elements of type IfcWindow
+2025-10-20 13:47:16,275 - src.bim_parser - INFO - Total elements extracted: 0
+2025-10-20 13:47:16,288 - utils.helpers - INFO - Successfully parsed basin-tessellation.ifc
+2025-10-20 13:47:31,018 - src.bim_parser - INFO - Successfully loaded IFC file: data/uploaded_files/wall-with-opening-and-window.ifc
+2025-10-20 13:47:31,018 - src.bim_parser - INFO - Found 1 elements of type IfcWall
+2025-10-20 13:47:31,042 - src.bim_parser - INFO - Found 0 elements of type IfcBeam
+2025-10-20 13:47:31,043 - src.bim_parser - INFO - Found 0 elements of type IfcColumn
+2025-10-20 13:47:31,043 - src.bim_parser - INFO - Found 0 elements of type IfcSlab
+2025-10-20 13:47:31,043 - src.bim_parser - INFO - Found 0 elements of type IfcPipeSegment
+2025-10-20 13:47:31,043 - src.bim_parser - INFO - Found 0 elements of type IfcDuctSegment
+2025-10-20 13:47:31,043 - src.bim_parser - INFO - Found 0 elements of type IfcCableCarrierSegment
+2025-10-20 13:47:31,043 - src.bim_parser - INFO - Found 0 elements of type IfcDoor
+2025-10-20 13:47:31,043 - src.bim_parser - INFO - Found 1 elements of type IfcWindow
+2025-10-20 13:47:31,044 - src.bim_parser - INFO - Total elements extracted: 2
+2025-10-20 13:47:31,046 - utils.helpers - INFO - Successfully parsed wall-with-opening-and-window.ifc
+2025-10-20 13:47:39,538 - src.graph_builder - INFO - Building graph from BIM elements...
+2025-10-20 13:47:39,539 - src.graph_builder - INFO - Graph built: 2 nodes, 2 edges
+2025-10-20 13:47:39,596 - src.gnn_model - INFO - Using BCEWithLogitsLoss without pos_weight
+2025-10-20 13:47:39,596 - src.gnn_model - INFO - Model initialized on cpu
+2025-10-20 13:47:39,597 - src.gnn_model - INFO - Total parameters: 388481
+2025-10-20 13:47:39,614 - utils.helpers - ERROR - Error detecting clashes: Error(s) in loading state_dict for ClashDetectionGNN:
+	Unexpected key(s) in state_dict: "convs.1.att_src", "convs.1.att_dst", "convs.1.bias", "convs.1.lin.weight", "batch_norms.3.weight", "batch_norms.3.bias", "batch_norms.3.running_mean", "batch_norms.3.running_var", "batch_norms.3.num_batches_tracked". 
+	size mismatch for conv_input.att_src: copying a param with shape torch.Size([1, 4, 256]) from checkpoint, the shape in current model is torch.Size([1, 4, 128]).
+	size mismatch for conv_input.att_dst: copying a param with shape torch.Size([1, 4, 256]) from checkpoint, the shape in current model is torch.Size([1, 4, 128]).
+	size mismatch for conv_input.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for conv_input.lin.weight: copying a param with shape torch.Size([1024, 27]) from checkpoint, the shape in current model is torch.Size([512, 27]).
+	size mismatch for convs.0.att_src: copying a param with shape torch.Size([1, 4, 256]) from checkpoint, the shape in current model is torch.Size([1, 4, 128]).
+	size mismatch for convs.0.att_dst: copying a param with shape torch.Size([1, 4, 256]) from checkpoint, the shape in current model is torch.Size([1, 4, 128]).
+	size mismatch for convs.0.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for convs.0.lin.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([512, 512]).
+	size mismatch for conv_output.att_src: copying a param with shape torch.Size([1, 1, 256]) from checkpoint, the shape in current model is torch.Size([1, 1, 128]).
+	size mismatch for conv_output.att_dst: copying a param with shape torch.Size([1, 1, 256]) from checkpoint, the shape in current model is torch.Size([1, 1, 128]).
+	size mismatch for conv_output.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for conv_output.lin.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([128, 512]).
+	size mismatch for edge_mlp.0.weight: copying a param with shape torch.Size([256, 512]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+	size mismatch for edge_mlp.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for edge_mlp.3.weight: copying a param with shape torch.Size([128, 256]) from checkpoint, the shape in current model is torch.Size([64, 128]).
+	size mismatch for edge_mlp.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for edge_mlp.6.weight: copying a param with shape torch.Size([1, 128]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for batch_norms.0.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for batch_norms.0.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for batch_norms.0.running_mean: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for batch_norms.0.running_var: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for batch_norms.1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for batch_norms.1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for batch_norms.1.running_mean: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for batch_norms.1.running_var: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for batch_norms.2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for batch_norms.2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for batch_norms.2.running_mean: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for batch_norms.2.running_var: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([128]).
+2025-10-20 13:47:48,760 - src.graph_builder - INFO - Building graph from BIM elements...
+2025-10-20 13:47:48,761 - src.graph_builder - INFO - Graph built: 2 nodes, 2 edges
+2025-10-20 13:47:48,775 - src.clash_detector - INFO - Starting clash detection...
+2025-10-20 13:47:48,776 - src.clash_detector - INFO - Detected 1 clashes
+2025-10-20 13:47:48,778 - utils.helpers - INFO - Detected 1 clashes
+2025-10-20 13:47:53,888 - src.optimization_engine - INFO - Generating optimization suggestions...
+2025-10-20 13:47:53,896 - src.optimization_engine - INFO - Generated 2 optimization suggestions
+2025-10-20 13:47:53,897 - utils.helpers - INFO - Generated 2 suggestions

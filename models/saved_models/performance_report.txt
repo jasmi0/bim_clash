@@ -1,0 +1,11 @@
+GNN MODEL PERFORMANCE REPORT
+======================================================================
+
+Accuracy:  61.60%
+Precision: 57.66%
+Recall:    98.46%
+F1 Score:  72.73%
+
+Confusion Matrix:
+  TN=26, FP=94
+  FN=2, TP=128

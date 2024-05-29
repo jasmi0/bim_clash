@@ -1,0 +1,57 @@
+# BIM Clash Detection Configuration
+
+# Model Configuration
+model:
+  hidden_channels: 128
+  num_layers: 3
+  dropout: 0.2
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 100
+  
+# Clash Detection Settings
+clash_detection:
+  # Minimum distance threshold (in meters) for clash detection
+  distance_threshold: 0.05
+  # Element types to consider for clash detection
+  element_types:
+    - IfcWall
+    - IfcBeam
+    - IfcColumn
+    - IfcSlab
+    - IfcPipeSegment
+    - IfcDuctSegment
+    - IfcCableCarrierSegment
+    - IfcDoor
+    - IfcWindow
+  # Clash severity levels
+  severity_levels:
+    critical: 0.0  # Complete overlap
+    high: 0.02     # < 2cm clearance
+    medium: 0.05   # < 5cm clearance
+    low: 0.10      # < 10cm clearance
+
+# Optimization Settings
+optimization:
+  max_suggestions: 5
+  consider_cost: true
+  consider_material: true
+  consider_functionality: true
+
+# Visualization Settings
+visualization:
+  default_color: "#808080"
+  clash_colors:
+    critical: "#FF0000"
+    high: "#FF6600"
+    medium: "#FFAA00"
+    low: "#FFFF00"
+  highlight_opacity: 0.7
+  default_opacity: 0.5
+
+# Data Paths
+paths:
+  uploaded_files: "data/uploaded_files"
+  processed_data: "data/processed"
+  models: "models/saved_models"
+  logs: "logs"
