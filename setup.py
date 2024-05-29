@@ -21,11 +21,11 @@ def check_python_version():
     print(f"Python {version.major}.{version.minor}.{version.micro}")
     
     if version.major < 3 or (version.major == 3 and version.minor < 8):
-        print("❌ Error: Python 3.8+ required")
+        print("Error: Python 3.8+ required")
         print("Please upgrade Python and try again")
         return False
     
-    print("✅ Python version is compatible")
+    print("Python version is compatible")
     return True
 
 
@@ -37,19 +37,19 @@ def install_dependencies():
     
     try:
         # Upgrade pip first
-        print("\n📦 Upgrading pip...")
+        print("\n Upgrading pip...")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
         
         # Install requirements
-        print("\n📦 Installing requirements...")
+        print("\n Installing requirements...")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
         
-        print("\n✅ All dependencies installed successfully!")
+        print("\n All dependencies installed successfully!")
         return True
         
     except subprocess.CalledProcessError as e:
-        print(f"\n❌ Error installing dependencies: {str(e)}")
-        print("\nTroubleshooting:")
+        print(f"\n Error installing dependencies: {str(e)}")
+        print("\n Troubleshooting:")
         print("1. Make sure you've activated the virtual environment")
         print("2. Try running: pip install --upgrade pip setuptools wheel")
         print("3. Check INSTALLATION.md for platform-specific instructions")
@@ -71,7 +71,7 @@ def create_directories():
         path = Path(dir_path)
         if not path.exists():
             path.mkdir(parents=True, exist_ok=True)
-            print(f"✅ Created: {dir_path}")
+            print(f" Created: {dir_path}")
         else:
             print(f"✓ Exists: {dir_path}")
     
@@ -94,7 +94,7 @@ def verify_installation():
         return result.returncode == 0
         
     except Exception as e:
-        print(f"❌ Error running tests: {str(e)}")
+        print(f" Error running tests: {str(e)}")
         return False
 
 
@@ -110,7 +110,7 @@ def main():
     
     # Step 2: Create directories
     if not create_directories():
-        print("\n⚠️  Warning: Could not create all directories")
+        print("\n Warning: Could not create all directories")
     
     # Step 3: Ask user about installation
     print_header("Dependency Installation")
@@ -126,21 +126,21 @@ def main():
     
     if response in ['', 'y', 'yes']:
         if not install_dependencies():
-            print("\n❌ Setup failed during dependency installation")
+            print("\n Setup failed during dependency installation")
             sys.exit(1)
     else:
-        print("\n⚠️  Skipping dependency installation")
+        print("\n  Skipping dependency installation")
         print("Run 'pip install -r requirements.txt' manually later")
     
     # Step 4: Verify installation
     print_header("Final Steps")
-    response = input("🧪 Run installation tests? [Y/n]: ").strip().lower()
+    response = input(" Run installation tests? [Y/n]: ").strip().lower()
     
     if response in ['', 'y', 'yes']:
         if verify_installation():
-            print("\n🎉 Setup completed successfully!")
+            print("\n Setup completed successfully!")
         else:
-            print("\n⚠️  Setup completed with warnings")
+            print("\n  Setup completed with warnings")
             print("Please review the test results above")
     
     # Print next steps
@@ -152,7 +152,7 @@ def main():
     print("\n4. Upload an IFC file to begin clash detection")
     print("\n5. Check example_usage.py for API usage examples")
     
-    print("\n📚 Documentation:")
+    print("\n Documentation:")
     print("   - README.md - Full documentation")
     print("   - INSTALLATION.md - Installation guide")
     print("   - config.yaml - Configuration options")

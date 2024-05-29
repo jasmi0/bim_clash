@@ -1,12 +1,12 @@
 # AI-Powered BIM Clash Detection & Design Optimization
 
-🏗️ An intelligent system that integrates AI with Building Information Modeling (BIM) to automatically detect clashes in construction designs and suggest optimization solutions.
+An intelligent system that integrates AI with Building Information Modeling (BIM) to automatically detect clashes in construction designs and suggest optimization solutions.
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Streamlit](https://img.shields.io/badge/streamlit-1.28+-red.svg)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -22,19 +22,19 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-## 🎯 Overview
+## Overview
 
 This project revolutionizes the construction design process by automatically detecting conflicts between building elements (e.g., plumbing, electrical, structural) and recommending intelligent solutions. The system combines geometric analysis with Graph Neural Networks (GNNs) to provide accurate clash detection and optimization suggestions.
 
 ### Key Objectives
 
-- ✅ Automatically detect clashes between different BIM elements
-- ✅ Optimize designs by suggesting alternative solutions
-- ✅ Enable real-time clash detection as designs progress
-- ✅ Visualize clashes in an interactive 3D dashboard
-- ✅ Improve collaboration between architects, engineers, and construction teams
+- Automatically detect clashes between different BIM elements
+- Optimize designs by suggesting alternative solutions
+- Enable real-time clash detection as designs progress
+- Visualize clashes in an interactive 3D dashboard
+- Improve collaboration between architects, engineers, and construction teams
 
-## 🚀 Features
+## Features
 
 ### Core Capabilities
 
@@ -77,7 +77,7 @@ This project revolutionizes the construction design process by automatically det
    - Summary statistics and metrics
    - Detailed clash descriptions
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Core Technologies
 
@@ -100,7 +100,7 @@ This project revolutionizes the construction design process by automatically det
 
 See `requirements.txt` for complete list of dependencies.
 
-## 🏛️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -136,7 +136,7 @@ See `requirements.txt` for complete list of dependencies.
 6. **Optimization**: Generate intelligent suggestions
 7. **Visualization**: Display results in interactive 3D viewer
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -177,7 +177,7 @@ See `requirements.txt` for complete list of dependencies.
    python -c "import ifcopenshell; import streamlit; import torch; print('All dependencies installed successfully!')"
    ```
 
-## 🎮 Usage
+## Usage
 
 ### Running the Application
 
@@ -232,7 +232,7 @@ If you don't have IFC files, you can download sample files from:
 - [buildingSMART Sample Files](https://www.buildingsmart.org/sample-ifc-files/)
 - [IFC Examples](https://github.com/buildingSMART/Sample-Test-Files)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 bim_clash/
@@ -265,7 +265,7 @@ bim_clash/
     └── bim_clash.log          # Log file
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Configuration File (`config.yaml`)
 
@@ -314,7 +314,7 @@ Edit `config.yaml` to adjust:
 - Visualization colors
 - Element types to analyze
 
-## 📚 API Reference
+## API Reference
 
 ### BIMParser
 
@@ -361,7 +361,7 @@ optimizer = OptimizationEngine(elements, clashes, config)
 suggestions = optimizer.generate_suggestions()
 ```
 
-## 📊 Performance
+## Performance
 
 ### Benchmarks
 
@@ -384,7 +384,7 @@ suggestions = optimizer.generate_suggestions()
    - Reduce number of GNN layers for faster inference
    - Cache parsed data for repeated analysis
 
-## 🔮 Future Improvements
+## Future Improvements
 
 ### Planned Features
 
@@ -406,7 +406,7 @@ suggestions = optimizer.generate_suggestions()
 **Q3 2026**: Advanced ML models, API integration  
 **Q4 2026**: Mobile app, real-time collaboration
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -423,28 +423,28 @@ Contributions are welcome! Please follow these steps:
 - Write unit tests for new features
 - Update documentation as needed
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Authors
+## Authors
 
 - **BIM Clash Detection Team**
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - buildingSMART for IFC standards
 - IfcOpenShell developers
 - PyTorch Geometric team
 - Streamlit community
 
-## 📞 Support
+## Support
 
 For issues, questions, or suggestions:
 - Create an issue on GitHub
 - Email: support@bimclashdetection.com (example)
 
-## 📈 Version History
+## Version History
 
 - **v1.0.0** (2025-10-04): Initial release
   - IFC file parsing
